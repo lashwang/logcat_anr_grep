@@ -45,7 +45,7 @@ KEY_WORD = "ANR found in:"
 #KEY_WORD = "send CTQD error"
 KEY_WORD_REMOVE = "sig_init"
 
-LOGCAT_BEFORE_LINE = 200
+LOGCAT_BEFORE_LINE = 50
 LOGCAT_AFTER_LINE = 20
 
 
@@ -216,14 +216,14 @@ class LogCatGrep(object):
             if KEY_WORD in line:
                 #self.curr_version_code = self.get_version_code(line)
                 #print "get version code :" + str(self.curr_version_code)
-                print "find ANR events for version {} in user {}".format(str(self.curr_version_code),pckuserId)
+                print "find key \"{}\" in user {}".format(KEY_WORD,pckuserId)
                 # self.back_trace_line.append('\n\n')
                 # self.back_trace_line.append("[UserID]:{}\n".format(pckuserId))
                 # self.back_trace_line.append(line)
                 f_all = open(all_filename, 'a')
                 find = True
                 f_all.write(
-                    "[anr find for user, dump logs]{}\n====================================\n".format(pckuserId))
+                    "[ANT events find for user, dump logs]{}\n====================================\n".format(pckuserId))
                 start = line_number - LOGCAT_BEFORE_LINE
                 end = line_number + LOGCAT_AFTER_LINE
                 if start < 0:
