@@ -29,8 +29,10 @@ import re
 
 OUTPUT_DIR = 'output'
 
-#RECIPIENTS = ['swang@seven.com','dmorgan@seven.com','sglazova@seven.com','cadams@seven.com']
-RECIPIENTS = ['swang@seven.com']
+RECIPIENTS = ['swang@seven.com','ahu@seven.com','fluo@seven.com','jinwang@seven.com',
+              'kyang@seven.com','wli@seven.com',
+              'dmorgan@seven.com','sglazova@seven.com','cadams@seven.com']
+#RECIPIENTS = ['swang@seven.com']
 
 
 RECIPIENTS_TEST = ['swang@seven.com']
